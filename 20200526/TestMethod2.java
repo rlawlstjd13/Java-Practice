@@ -1,0 +1,26 @@
+public class TestMethod2 {
+	// 메소드의 이름: 영소문자 , 여러단어로 합쳐진 이름 지으면 두번쨰 단어 첫글자 대문자. 보통이름을 동사로 지음.
+	public static int sum() { // return type : void (없음)
+	    int a = 10;
+		int b = 20;
+		int sum = a + b; // 30을 만들어내는 기계
+		
+		return sum; // 뱉아낸다? 반환? 
+	}
+	// pi 메소드 {3.14 실수값을 반환하는 메소드}
+	public static double pi () {
+		double a = 3.14; // 변수 선언
+		return a; //반환 버튼 on?
+	}
+	public static void main(String[] args) {
+		System.out.println("시작");
+		
+		int result = sum(); // sum 메소드 값을 result로 넣는다
+		System.out.println(result);
+		
+		double a = pi();
+		System.out.println(a);
+		
+		System.out.println("끝");
+	}
+}
