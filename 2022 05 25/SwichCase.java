@@ -1,0 +1,19 @@
+public class SwichCase {
+	public static void main(String[] args) {
+		int i = 3;
+		
+		switch (i) { //1 if 2 else if 3 else if default else 로 쓸수있음.
+			case 1:
+			System.out.println("일");
+			break;
+			case 2:
+			System.out.println("이");
+			break;
+			case 3:
+			System.out.println("삼");
+			break; // 없으면 i 값을찾고 그밑에것도 다나옴.
+			default: // switch 조건에 없으면 default로 감.
+			System.out.println("일이삼 아님");
+		}
+	}
+}
