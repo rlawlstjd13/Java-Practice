@@ -1,0 +1,14 @@
+public class StaticVariableAndConst { 
+	public static void main(String[] args) {
+		int i = 10; // 변수는 변할수있고 상수는 안변함 i = 변수 , 10 = 상수
+		
+		i++;
+		
+		final int My_NUMBER = 22; // 상수를 바꾸는법? final 붙여야함
+		
+		//My_NUMBER++; // ++안됨 컴파일러에러  변할수가없음.
+		
+		final double PI = 3.14;
+		System.out.println(5 * 5 * PI);
+	}
+}

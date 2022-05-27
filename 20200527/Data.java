@@ -1,0 +1,9 @@
+public class Data {
+	int year;
+	int month;
+	int day;
+	
+	void printData() {
+		System.out.println(year + "-" + month + "-" + day);
+	}
+}
