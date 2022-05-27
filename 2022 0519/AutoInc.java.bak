@@ -1,0 +1,25 @@
+public class AutoInc {
+	public static void main(String[] args) {
+		int a = 10;
+		
+		System.out.println(++a); // ++앞에붙이면 바로 나오고
+		
+		System.out.println(a++); // 뒤에 붙이면 한개더 만들어야함.
+		System.out.println(a);
+		
+		//System.out.println(a);
+		
+		
+		//복합 대입 연산자 += -= ...
+		//a + = 1;  // 11
+		//a - = 1;  // 10
+		
+		//증강연산자
+		//a++; // 1씩증가할때 많이씀
+		//a++;
+		//a++;
+		
+		//a--; 
+		//System.out.println(a);
+	}
+}
