@@ -1,0 +1,18 @@
+public class StringMethods {
+	public static void main(String[] args) {
+		String hello = "hello";
+		
+		int index = hello.indexOf("o");
+		System.out.println(index);
+		
+		int notFound = hello.indexOf("a");
+		System.out.println(notFound); // 없으면 -1 로나옴.
+		
+		int index2 = hello.indexOf("l", 3); // , 3번째부터 찾아라
+		System.out.println(index2);
+		
+		int index3 = hello.lastIndexOf("l"); // 원래는 왼쪽에서부터 찾는데 오른쪽에서부터 찾는법
+		System.out.println(index3);
+		
+	}
+}
