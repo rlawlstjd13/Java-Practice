@@ -1,0 +1,17 @@
+// 사용자가 입력한 정수의 약수를 나열하고 총개수 출력
+import java.util.Scanner;
+public class Work4 {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.println("정수를 입력하세요");
+		
+		int num = scan.nextInt();
+		
+		for (int i = 1; i <= num; i++) {
+			 if (num % i == 0) {
+				 System.out.println(i);
+			 }
+		}
+	}
+	
+}
