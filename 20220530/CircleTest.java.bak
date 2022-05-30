@@ -1,0 +1,34 @@
+// p203
+class Point {
+	// 생성자
+	private int x,y;
+	
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+}
+
+
+class Circle {
+	private int radius = 0;
+	private Point center; // has-a 참조 변수가 필드로 선언됨.
+	
+	public Circle(Point p, int r) {
+		center = p;
+		radius = r;
+	}
+	// 중심점을 getter
+	public Point getPoint() {
+		return center;
+	}
+	public void setPoint(Point p) {
+		center = p;
+	}
+}
+public class CircleTest {
+	public static void main(String[] args) {
+		Point p = new Point(25, 78);
+		Circle c = new Circle(p, 10);
+	}
+}

@@ -1,0 +1,11 @@
+public class TestDog {
+	public static void main(String[] args) {
+		Dog mydog = new Dog("별이", "푸들", 11);
+		Dog mydog2 = new Dog("멍멍", "비글", 5);
+		Dog mydog3 = new Dog("장군이", "진돗개", 3);
+		
+		mydog.setName("비버");
+		System.out.println(mydog.getName());
+		
+	}
+} 

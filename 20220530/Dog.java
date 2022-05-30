@@ -1,0 +1,64 @@
+// 강아지 Dog클래스
+// name: 이름
+// breed: 종
+// age: 나이
+
+// 강아지 3개의 모든 필드를 전달받아 초기화 할 수 있는
+// 생성자
+
+// 강아지 이름, 종을 전달받은 값으로 초기화하고
+// 나이는 1살로 초기화 할수 있는 생성자
+
+// 모든필드를 private 접근 제한자로 정보은닉(캡슐화)하고
+// 각 필드의 public한 getter/setter를 작성해보세요.
+
+public class Dog {
+	private String name;
+	private String breed;
+	private int age;
+	
+	// public Dog() { // 초기화
+		// name = "1";
+		// breed = "1";
+		// age = 1;
+	// }
+	
+	public Dog (String name, String breed, int age) { //생성자
+		this.name = name;
+		this.breed = breed;
+		this.age = age;
+	}
+	// 강아지 이름, 종을 전달받은 값으로 초기화하고
+   // 나이는 1살로 초기화 할수 있는 생성자
+	public Dog(String n, String b) {
+		this (n, b, 1); // 
+	}
+	
+	// 각 필드의 public한 getter/setter를 작성해보세요.
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getBreed() {
+		return breed;
+	}
+	public void setBreed(String breed) {
+		this.breed = breed;
+	}
+	
+	
+	public int age() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public void printAll() {
+		System.out.println(name);
+		System.out.println(breed);
+		System.out.println(age);
+	}
+}
