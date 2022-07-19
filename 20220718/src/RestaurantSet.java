@@ -71,8 +71,8 @@ public class RestaurantSet {
 	}
 
 	// 3
-	public Restaurant selectrestaurantsID(int restaurantsID) throws SQLException {
-		String query = "SELECT * From Restaurant Where name = '" + restaurantsID + "'";
+	public Restaurant selectrestaurantID(int restaurantID) throws SQLException {
+		String query = "SELECT * From Restaurant Where name = '" + restaurantID + "'";
 
 		Connection conn = null;
 		Statement stmt = null;
@@ -82,6 +82,7 @@ public class RestaurantSet {
 			conn = DBUtil.getConnection();
 			stmt = conn.createStatement();
 			rs = stmt.executeQuery(query);
+			System.out.println("?");
 
 			if (rs.next()) {
 				return resultMapping(rs);
