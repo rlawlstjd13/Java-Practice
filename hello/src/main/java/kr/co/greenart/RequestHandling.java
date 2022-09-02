@@ -1,6 +1,5 @@
 package kr.co.greenart;
 
-import javax.servlet.http.HttpServletRequest;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
