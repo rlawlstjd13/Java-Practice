@@ -8,6 +8,7 @@ import javax.validation.constraints.Size;
 
 
 public class User {
+	private int id;
 	//자동 유효성 검사 pom에 라이브러리추가햇음
 	@NotBlank(message = "이름을 입력해주세요")
 	@Size(min = 1, max = 4, message = "이름은 1 ~ 4자 사이여야합니다.")
@@ -19,6 +20,13 @@ public class User {
 	public User() {
 		
 	}
+	public User(int id, String name, int age) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.age = age;
+	}
+	
 	public User(String name, int age) {
 		super();
 		this.name = name;
@@ -35,6 +43,12 @@ public class User {
 	}
 	public void setAge(int age) {
 		this.age = age;
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	@Override
 	public String toString() {
