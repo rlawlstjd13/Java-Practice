@@ -7,13 +7,20 @@ import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @PropertySource("classpath:kr/co/greenart/config/mysql.properties")
+@ComponentScan("kr.co.greenart.model.car")
 //프라퍼티소스 가져오는법
+@EnableTransactionManagement
+//트랜잭션관리, 트랜잭션 관리할 관리자만 bean으로 등록시키면됨.
 public class RootConfig {
 	//{}properties이름이랑 동일해야함
 	//value로
@@ -44,5 +51,10 @@ public class RootConfig {
 		return new JdbcTemplate(ds);
 		//오토와이얼드해서 데이타소스를 사용하는방법
 		//아니면 지금 방법.()안에
+	}
+	@Bean
+	@Autowired
+	public PlatformTransactionManager txManager(DataSource ds) {
+		return new DataSourceTransactionManager(ds);
 	}
 }
